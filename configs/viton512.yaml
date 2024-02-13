@@ -80,19 +80,19 @@ data:
           target: ldm.data.cp_dataset.CPDataset
           params:
               mode: train
-              dataroot: /data/user/gjh/VITON-HD/
+              dataroot: /kaggle/input/dci-dataset/DCIData
               image_size: 512
       validation:
           target: ldm.data.cp_dataset.CPDataset
           params:
               mode: test
-              dataroot: /data/user/gjh/VITON-HD/
+              dataroot: /kaggle/input/dci-dataset/DCIData
               image_size: 512
       test:
           target: ldm.data.cp_dataset.CPDataset
           params:
               mode: test
-              dataroot: /data/user/gjh/VITON-HD/
+              dataroot: /kaggle/input/dci-dataset/DCIData
               image_size: 512
 
 lightning:
