@@ -17,7 +17,7 @@ from contextlib import contextmanager
 from functools import partial
 from tqdm import tqdm
 from torchvision.utils import make_grid
-from pytorch_lightning.utilities.distributed import rank_zero_only
+from pytorch_lightning.utilities.rank_zero import rank_zero_only
 import torch.nn.functional as F
 
 from ldm.modules.vgg import VGG19_feature_color_torchversion
@@ -1589,6 +1589,7 @@ class LatentTryOnDiffusion(LatentDiffusion):
         self.vgg = VGG19_feature_color_torchversion(vgg_normal_correct=True)
         self.vgg.load_state_dict(torch.load("/kaggle/working/DCI/ldm/models/vgg/vgg19_conv.pth", map_location="cpu"))
         
+
         self.vgg.eval()
 
 
