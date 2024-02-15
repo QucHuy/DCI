@@ -98,7 +98,7 @@ data:
 lightning:
   trainer:
     max_epochs: 40
-    num_nodes: 1
+    num_nodes: 2
     accelerator: 'gpu'
     gpus: "0,1"
     accumulate_grad_batches: 2
