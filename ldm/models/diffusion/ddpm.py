@@ -17,7 +17,7 @@ from contextlib import contextmanager
 from functools import partial
 from tqdm import tqdm
 from torchvision.utils import make_grid
-from pytorch_lightning.utilities.rank_zero import rank_zero_only
+from pytorch_lightning.utilities.distributed import rank_zero_only
 import torch.nn.functional as F
 
 from ldm.modules.vgg import VGG19_feature_color_torchversion
